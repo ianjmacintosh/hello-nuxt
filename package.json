@@ -10,13 +10,15 @@
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "prepare": "husky install",
     "lint": "yarn lint:style",
-    "test": "jest"
+    "test": "jest",
+    "lhci": "lhci autorun"
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.15.1",
+    "lighthouse-ci": "^1.12.0",
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
