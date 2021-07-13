@@ -11,24 +11,6 @@ on:
       - master
 
 jobs:
-  lhci:
-    name: Lighthouse
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-      - name: Set up Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Install dependencies and build
-        run: |
-          yarn install
-          npm run build
-      - name: Test site with Lighthouse CI
-        run: |
-          npx lhci autorun
-
   ci:
     runs-on: ${{ matrix.os }}
 
