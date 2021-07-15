@@ -5,11 +5,7 @@ module.exports = {
     },
     collect: {
       staticDistDir: './dist',
-      url: [
-        'http://localhost/',
-        'http://localhost/articles/',
-        'http://localhost/code-projects/',
-      ],
+      url: ['http://localhost/'],
     },
   },
 }
