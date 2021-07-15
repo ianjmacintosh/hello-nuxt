@@ -50,3 +50,11 @@ jobs:
 
       - name: Run tests 🧪
         run: yarn test
+
+      - name: Run Lighthouse
+        run: |
+          npm run generate
+          npm install -g @lhci/cli@0.7.x
+          lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
